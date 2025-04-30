@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiz="X-UA-Compatible" content="ie=edge" />
+    <title>3D Racing Game</title>
+    <link rel="stylesheet" href="start.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- LIBRARIES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/16/Stats.min.js"></script>
+    <script type="importmap">
+      {
+      "imports": {
+            "three": "https://cdn.skypack.dev/three@0.149.0/build/three.module",
+            "three/": "https://cdn.skypack.dev/three@0.149.0/"
+      }
+     }
+    </script>
+
+    <!-- SOURCE MAIN FILE -->
+    <script type="module" src="game.js"></script>
+
+    <!-- HTML CODE -->
+    <div id="start">
+        <div class="start-container">
+            <h1>3D Racing Game</h1>
+            
+            <div class="game-description">
+                <p>Experience high-speed racing in a 3D environment. 
+                Collect fuel cans, avoid obstacles, and beat your opponents!</p>
+            </div>
+            
+            <div class="controls-section">
+                <h2>GAME CONTROLS</h2>
+                <div class="controls-grid" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;"
+                    unselectable="on" onselectstart="return false;" onmousedown="return false;">
+                    <!-- Up key (W) -->
+                    <div class="control-key">
+                        <div class="key-button key-up">
+                            <div class="key-icon"><i class="fas fa-arrow-up"></i></div>
+                            <div class="key-label">W</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Middle row (A,S,D) -->
+                    <div class="control-row">
+                        <div class="key-button key-left">
+                            <div class="key-icon"><i class="fas fa-arrow-left"></i></div>
+                            <div class="key-label">A</div>
+                        </div>
+                        
+                        <div class="key-button key-down">
+                            <div class="key-icon"><i class="fas fa-arrow-down"></i></div>
+                            <div class="key-label">S</div>
+                        </div>
+                        
+                        <div class="key-button key-right">
+                            <div class="key-icon"><i class="fas fa-arrow-right"></i></div>
+                            <div class="key-label">D</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="features">
+                <div class="feature"><i class="fas fa-tachometer-alt"></i> High-speed racing</div>
+                <div class="feature"><i class="fas fa-gas-pump"></i> Fuel management</div>
+                <div class="feature"><i class="fas fa-car-crash"></i> Damage system</div>
+            </div>
+            
+            <button id="start_button"><span><i>START RACE</i></span></button>
+        </div>
+    </div>
+
+    <!-- Game UI -->
+    <div id="game" style="display: none;">
+        <!-- Top Center UI Container (horizontal layout) -->
+        <div id="central-ui-container">
+            <!-- Score Display -->
+            <div id="score-container" class="ui-element">
+                <div class="score-label">SCORE</div>
+                <div id="score">5000</div>
+            </div>
+
+            <!-- Modern Speedometer -->
+            <div id="speedometer-container" class="ui-element">
+                <div class="speedo-display">
+                    <div class="speedo-value-container">
+                        <div id="speed">300</div>
+                        <div class="speed-unit">MPH</div>
+                    </div>
+                    <div class="speedo-gauge">
+                        <div class="speedo-gauge-fill" id="speedo-gauge-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Health Display -->
+            <div id="health-container" class="ui-element">
+                <div class="health-label">HEALTH</div>
+                <div id="health">100</div>
+            </div>
+        </div>
+
+        <!-- Fuel Meter - Top Left -->
+        <div id="fuel-container" class="ui-element">
+            <div class="fuel-icon"><i class="fas fa-gas-pump"></i></div>
+            <div class="fuel-bar-container">
+                <div id="fuel-bar" class="fuel-bar"></div>
+            </div>
+            <div id="fuel">100</div>
+        </div>
+
+        <!-- Time Display -->
+        <div id="time-container" class="ui-element">
+            <div id="time">0:0</div>
+        </div>
+
+        <!-- Mileage Display -->
+        <div id="mileage-container" class="ui-element">
+            <div id="mileage">Mileage: 0</div>
+        </div>
+
+        <!-- Next checkpoint info -->
+        <div id="next-container" class="ui-element">
+            <div id="next">Next Fuel Can: XX</div>
+        </div>
+    </div>
+
+    <div id="end"
+        style="z-index:100;-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+    </div>
+</body>
+
+</html>

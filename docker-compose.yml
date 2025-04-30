@@ -1,0 +1,9 @@
+services:  
+  game:
+    build:
+      context: ./game
+    volumes:
+      - ./game:/game
+    ports:
+      - 8080:8080
+    # user: 1000:1000  <-- Remove or comment this out for now
