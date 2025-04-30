@@ -1,10 +1,10 @@
-# Racing Pro 3D
+# 3D Racing Game
 
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)](https://threejs.org/)
 [![WebGL](https://img.shields.io/badge/WebGL-990000?style=for-the-badge&logo=webgl&logoColor=white)](https://www.khronos.org/webgl/)
 
-![Game Preview](https://i.imgur.com/placeholder.jpg)
+![Game Preview](https://github.com/rndastech/3D-Car-Racing/blob/main/WhatsApp%20Image%202025-04-30%20at%204.54.45%20PM.jpeg?raw=true)
 
 ## 📖 Overview
 
